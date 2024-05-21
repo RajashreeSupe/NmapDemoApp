@@ -1,0 +1,71 @@
+<h1>DEMO APP</h1>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">HOME</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">ABOUT US <span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">JOBS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">CLIENTS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">EMPLOYEES</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">CONTACT US</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+
+<h2>Profile</h2>
+<div *ngIf="user">
+  <div>
+    <strong>First Name:</strong> {{ user.firstName }}
+  </div>
+  <div>
+    <strong>Last Name:</strong> {{ user.lastName }}
+  </div>
+  <div>
+    <strong>Email:</strong> {{ user.email }}
+  </div>
+  <div>
+  <div>
+    <strong>Phone:</strong> {{ user.phone }}
+  </div>
+  <div>
+    <strong>Age:</strong> {{ user.age }}
+  </div>
+  <div>
+    <strong>State:</strong> {{ user.state}}
+  </div>
+  <div>
+    <strong>Country:</strong> {{ user.country }}
+  </div>
+  
+  <div>
+    <strong>Interests:</strong> {{ user.interest }}
+  </div>
+  <div *ngIf="user.addressType === 'home'">
+    <strong>Address 1:</strong> {{ user.address1 }}
+    <strong>Address 2:</strong> {{ user.address2 }}
+  </div>
+  <div *ngIf="user.addressType === 'company'">
+    <strong>Company Address 1:</strong> {{ user.companyAddress1 }}
+    <strong>Company Address 2:</strong> {{ user.companyAddress2 }}
+  </div>
+  <button (click)="editPhoto()">Edit Photo</button>
+  <button (click)="editProfile()">Edit Profile</button>
+</div>

@@ -1,0 +1,145 @@
+
+ <div class="background-div">
+    <h1>REGISTER</h1>
+ <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+   <div class="form-group">
+     <label for="photo">Upload Photo :</label><input type="file" id="photo" (change)="onFileChange($event)" class="form-control" />
+   </div>
+   <div>
+     <label for="firstName"></label>
+     <input  placeholder="FirstName"  id="firstName" formControlName="firstName">
+     <div *ngIf="registrationForm.controls['firstName'].errors">
+       <small *ngIf="registrationForm.controls['firstName'].errors['required']"></small>
+       <small *ngIf="registrationForm.controls['firstName'].errors['pattern']"></small>
+     </div>
+   </div>
+   <div>
+     <label for="lasttName"></label>
+     <input  placeholder="LastName" id="lastName" formControlName="lastName">
+     <div *ngIf="registrationForm.controls['lastName'].errors">
+       <small *ngIf="registrationForm.controls['lastName'].errors['required']"></small>
+       <small *ngIf="registrationForm.controls['lastName'].errors['pattern']"></small>
+     </div>
+   </div>
+ 
+   <div>
+     <label for="email"></label>
+     <input  placeholder="Email" id="email" formControlName="email">
+   </div>
+ 
+   <div>
+     <label for="phone"></label>
+     <input  placeholder="Contact" id="phone" formControlName="phone">
+   </div>
+ 
+   <div>
+     <label for="age"></label>
+     <input  placeholder="Age" type="range" id="age" formControlName="age" min="0" max="100">
+     <span>{{ registrationForm.controls['age'].value }}</span>
+   </div>
+
+   <div>
+    <label for="state">State:</label>
+    
+    <select id="state" formControlName="state">
+      <option value="">State</option>
+      <option value="AP">Andhra Pradesh</option>
+      <option value="AR">Arunachal Pradesh</option>
+      <option value="AS">Assam</option>
+      <option value="BR">Bihar</option>
+      <option value="CT">Chhattisgarh</option>
+      <option value="GA">Goa</option>
+      <option value="GJ">Gujarat</option>
+      <option value="HR">Haryana</option>
+      <option value="HP">Himachal Pradesh</option>
+      <option value="JH">Jharkhand</option>
+      <option value="KA">Karnataka</option>
+      <option value="KL">Kerala</option>
+      <option value="MP">Madhya Pradesh</option>
+      <option value="MH">Maharashtra</option>
+      <option value="MN">Manipur</option>
+      <option value="ML">Meghalaya</option>
+      <option value="MZ">Mizoram</option>
+      <option value="NL">Nagaland</option>
+      <option value="OR">Odisha</option>
+      <option value="PB">Punjab</option>
+      <option value="RJ">Rajasthan</option>
+      <option value="SK">Sikkim</option>
+      <option value="TN">Tamil Nadu</option>
+      <option value="TG">Telangana</option>
+      <option value="TR">Tripura</option>
+      <option value="UP">Uttar Pradesh</option>
+      <option value="UT">Uttarakhand</option>
+      <option value="WB">West Bengal</option>
+      <option value="AN">Andaman and Nicobar Islands</option>
+      <option value="CH">Chandigarh</option>
+      <option value="DN">Dadra and Nagar Haveli and Daman and Diu</option>
+      <option value="DL">Delhi</option>
+      <option value="LD">Lakshadweep</option>
+      <option value="PY">Puducherry</option>
+    </select>
+  </div>
+  
+
+  <div>
+    <label for="country">Country:</label>
+    
+    <select  id="country" formControlName="country">
+      <option value="">Select a country</option>
+      <option value="AU">Australia</option>
+      <option value="BR">Brazil</option>
+      <option value="CA">Canada</option>
+      <option value="CN">China</option>
+      <option value="FR">France</option>
+      <option value="DE">Germany</option>
+      <option value="IN">India</option>
+      <option value="IT">Italy</option>
+      <option value="JP">Japan</option>
+      <option value="MX">Mexico</option>
+      <option value="RU">Russia</option>
+      <option value="ZA">South Africa</option>
+      <option value="KR">South Korea</option>
+      <option value="GB">United Kingdom</option>
+      <option value="US">United States</option>
+    </select>
+  </div>
+  
+
+ 
+   <div>
+     <label for="interest">Interests:</label>
+     <input id="interest" formControlName="interest">
+   </div>
+ 
+   <div>
+     <label for="addressType">Address Type:</label>
+     <select id="addressType" formControlName="addressType">
+       <option value="home">Home</option>
+       <option value="company">Company</option>
+     </select>
+   </div>
+ 
+   <div *ngIf="registrationForm.controls['addressType'].value === 'home'">
+     <label for="address1">Address 1:</label>
+     <input id="address1" formControlName="address1">
+     <label for="address2">Address 2:</label>
+     <input id="address2" formControlName="address2">
+   </div>
+ 
+   <div *ngIf="registrationForm.controls['addressType'].value === 'company'">
+     <label for="companyAddress1">Company Address 1:</label>
+     <input id="companyAddress1" formControlName="companyAddress1">
+     <label for="companyAddress2">Company Address 2:</label>
+     <input id="companyAddress2" formControlName="companyAddress2">
+   </div>
+</form>
+   <input type="checkbox" id="myCheckbox" name="myCheckbox" value="value1">
+    <label for="myCheckbox">subscribe to newsletter</label>
+ 
+   
+   <div class="button">
+    <button type="button" (click)="onCancel()">Cancel</button> 
+   <button class="sub" type="submit" (onClick)="onSubmit"><a routerLink="/profile"></a>Submit</button>
+</div>
+</div> 
+

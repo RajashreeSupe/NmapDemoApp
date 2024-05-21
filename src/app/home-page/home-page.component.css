@@ -1,0 +1,79 @@
+.navbar-expand-lg
+{
+    float:right;
+    margin-right: 5%;
+    margin-bottom: 20%;
+}
+h1{
+    color:white;
+}
+.h{
+    margin-left:5%;
+}
+.place
+{
+    margin-left:5%;
+    color:black;
+    background-color: white;
+    width: 40%;
+}
+#myCheckbox{
+    margin-left:5%;
+}
+
+.label
+{
+    margin-left:5%;
+}
+.register
+{
+    margin-left:25%;
+    color:black;
+    background-color:white;
+}
+.background-div {
+    width: 100%;
+    height: 800px;
+    background-image: url('/assets/abc2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.background-2 {
+    width: 100%;
+    height: 800px;
+    background-image: url('/assets/grey.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.background-3 {
+    width: 100%;
+    height: 800px;
+    background-image: url('/assets/black.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#fullTimeCheckbox{
+    margin-left: 10%;
+}
+#partTimeCheckbox{
+    margin-left: 3%;
+}
+  #search
+{
+  
+  
+    background-color: blue;
+    color: white;
+}  
+
+
+.i{
+    margin-left: 42%;
+    
+   }
+   .c{
+    margin-left: 35%;
+   }

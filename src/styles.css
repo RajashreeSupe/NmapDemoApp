@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+   footer {
+    background-color: #f8f8f8;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+
+  
+  footer {
+    margin-top: 20px;
+  }
